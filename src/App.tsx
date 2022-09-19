@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { AboutPageLazy } from "./components/aboutPage/AboutPageLazy";
 import { CounterPageLazy } from "./components/mainPage/CounterPageLazy";
+import { classNames } from "./helpers/classNames/classNames";
 import "./style/index.scss";
 import { useTheme } from "./themes/useTheme";
 
@@ -13,7 +14,7 @@ export enum Theme {
 const App = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames("app", {}, [theme])}>
       <button onClick={toggleTheme}>ChangeTheme</button>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
