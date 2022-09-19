@@ -6,7 +6,7 @@ import "./style/index.scss";
 import { useTheme } from "./themes/useTheme";
 
 export enum Theme {
-  LINGHT = "light",
+  LIGHT = "light",
   DARK = "dark",
 }
 
