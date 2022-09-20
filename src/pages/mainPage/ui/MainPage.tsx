@@ -1,6 +1,4 @@
 import { useState } from "react";
-import classes from "./Counter.module.scss";
-import "../../style/index.scss";
 import { Link } from "react-router-dom";
 
 const Counter: React.FC = () => {
@@ -9,7 +7,7 @@ const Counter: React.FC = () => {
     setState((prev) => prev + 1);
   };
   return (
-    <div className={classes.div_cont}>
+    <div>
       <span>asd{state}</span>
       <button onClick={increment}>Increment</button>
       <Link to="/about">About</Link>

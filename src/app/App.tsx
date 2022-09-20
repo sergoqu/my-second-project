@@ -1,10 +1,11 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import { AboutPageLazy } from "./components/aboutPage/AboutPageLazy";
-import { CounterPageLazy } from "./components/mainPage/CounterPageLazy";
-import { classNames } from "./helpers/classNames/classNames";
-import "./style/index.scss";
-import { useTheme } from "./themes/useTheme";
+
+import "./styles/index.scss";
+import { useTheme } from "app/providers/ThemeProvider";
+import { MainPage } from "pages/mainPage";
+import { AboutPage } from "pages/aboutPage";
+import { classNames } from "shared/lib/classNames/classNames";
 
 export enum Theme {
   LIGHT = "light",
@@ -18,8 +19,8 @@ const App = () => {
       <button onClick={toggleTheme}>ChangeTheme</button>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<CounterPageLazy />} />
-          <Route path="/about" element={<AboutPageLazy />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Suspense>
     </div>
