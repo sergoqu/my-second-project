@@ -3,14 +3,17 @@ import { useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "app/providers/router";
 import { Navbar } from "widgets/Navbar";
+import { Sidebar } from "widgets/Sidebar";
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
-      <AppRouter />
-      <button onClick={toggleTheme}>ChangeTheme</button>
+      <div className="content-page">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 };
