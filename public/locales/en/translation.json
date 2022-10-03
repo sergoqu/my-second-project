@@ -4,5 +4,8 @@
   "Главная страница": "Main page",
   "Язык": "English",
   "новый перевод": "new Translate",
-  "Страница не найдена" : "Page not found"
+  "Страница не найдена" : "Page not found",
+  "Произошла непредвиненная ошибка" : "something is wrong",
+  "Обновить страницу" : "Reload page",
+  "вызвать ошибку" : "throw error"
 }
